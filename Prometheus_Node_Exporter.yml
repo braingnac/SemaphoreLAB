@@ -1,7 +1,7 @@
 ---
-  hosts: Kmaster
+- hosts: Kmaster
   become: true
-tasks:
+  tasks:
     - name: Print OS info
       ansible.builtin.package:
         name: apache2
