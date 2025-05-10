@@ -1,7 +1,6 @@
 ---
-- hosts: Kmaster
+- name: Installer Node Exporter
+  hosts: Kmaster
   become: true
-  tasks:
-    - name: Print OS info
-      ansible.builtin.package:
-        name: apache2
+  roles:
+    - node_exporter
