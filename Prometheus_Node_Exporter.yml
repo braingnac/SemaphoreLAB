@@ -1,6 +1,11 @@
 ---
-- name: Installer Node Exporter
   hosts: Kmaster
   become: true
-  roles:
-    - node_exporter
+  - name: update repository index
+    apt:
+      update_cache: yes
+
+  - name: remove apache2 from ubuntu servers
+    apt:
+      name: apache2
+      state: absent
