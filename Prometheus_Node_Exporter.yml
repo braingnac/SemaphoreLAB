@@ -1,5 +1,5 @@
 ---
-- hosts: KMaster
+- hosts: Kmaster
   become: true
   tasks:
     - name: Print OS info
